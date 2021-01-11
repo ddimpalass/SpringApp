@@ -25,12 +25,12 @@ class ViewController: UIViewController {
 
         if animationNextBool == true {
             animationNextBool = false
-            nextAnimation1 = AnimationPreset.allCases.randomElement()!.rawValue
+            nextAnimation1 = AnimationPreset.allCases.randomElement()?.rawValue ?? "fall"
             sender.setTitle("next: \(nextAnimation1)", for: .normal)
             myView.animation = nextAnimation2
         } else {
             animationNextBool = true
-            nextAnimation2 = AnimationPreset.allCases.randomElement()!.rawValue
+            nextAnimation2 = AnimationPreset.allCases.randomElement()?.rawValue ?? "fall"
             sender.setTitle("next: \(nextAnimation2)", for: .normal)
             myView.animation = nextAnimation1
         }
